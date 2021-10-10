@@ -28,11 +28,6 @@ class MessageService
         $receiverExists = ( Http::get('https://gadgetsdeals.co.za/api/user/getOne/' . $receiverId)['data']!=null ) ? true : False; 
         $senderExists   = ( Http::get('https://gadgetsdeals.co.za/api/user/getOne/' . $senderId)['data']!=null ) ? true : False;
         $servExists     = ( Http::get('https://gadgetsdeals.co.za/api/service/getOne/' . $servId)['data']!=null ) ? true : False;
-
-        error_log($receiverExists);
-        error_log($senderExists);
-        error_log($servExists);
-        error_log($servId);
         
         if($servExists && $receiverExists && $servExists){
             $res = Message::create($data);
