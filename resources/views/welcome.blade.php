@@ -11,7 +11,7 @@
 
     <script src="{{ asset('/js/app.js') }}"></script>
     <script>
-        Echo.private('helpTchat.4')
+        Echo.private('helpTchat.5')
             .listen('MessageEvent', e => {
                 console.log(e)
             })

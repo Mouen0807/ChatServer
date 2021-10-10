@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*$user = \App\Models\User::factory()->make();
-        Auth::login($user);*/
+        $user = \App\Models\User::factory()->make();
+        Auth::login($user);
     }
 }
